@@ -16,11 +16,12 @@ jobs:
               - name: Set up JDK 17
                 uses: actions/setup-java@v3
                 with:
-                    distibution: 'corretto'
+                    distribution: 'corretto'
                     java-version: '17'
 
               - name: Unit Tests
                 run: mvn -B test --file pom.xml
+                
               - name: Build the application
                 run: |
                   mvn clean
